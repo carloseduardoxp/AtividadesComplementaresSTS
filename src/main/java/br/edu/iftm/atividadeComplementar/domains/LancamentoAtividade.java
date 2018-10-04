@@ -1,4 +1,4 @@
-package br.edu.iftm.atividadeComplementar.model.domain;
+package br.edu.iftm.atividadeComplementar.domains;
 
 import java.util.Calendar;
 import java.util.Date;

@@ -1,10 +1,12 @@
-package br.edu.iftm.atividadeComplementar.model.domain;
+package br.edu.iftm.atividadeComplementar.domains;
 
 import java.util.Calendar;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import br.edu.iftm.atividadeComplementar.domains.LancamentoAtividade;
 
 public class LancamentoAtividadeTest {
 	

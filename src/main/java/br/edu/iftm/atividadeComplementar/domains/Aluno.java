@@ -1,7 +1,12 @@
-package br.edu.iftm.atividadeComplementar.model.domain;
+package br.edu.iftm.atividadeComplementar.domains;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Aluno {
 	
+	@Id
 	private Long ra;
 	
 	private String nome;

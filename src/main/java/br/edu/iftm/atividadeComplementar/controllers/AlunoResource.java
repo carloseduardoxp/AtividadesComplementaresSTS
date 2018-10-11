@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,22 +44,21 @@ public class AlunoResource {
 	}
 		
 	@PostMapping
-	public ResponseEntity<?> salvar(Aluno aluno) {
+	public ResponseEntity<?> salvar(@RequestBody Aluno aluno) {
 		service.salvarAtualizar(aluno);
 		return ResponseEntity.ok().body(aluno);
 	}
 	
 	@PutMapping
-	public ResponseEntity<?> atualizar(@PathVariable Aluno aluno) {
+	public ResponseEntity<?> atualizar(@RequestBody Aluno aluno) {
 		service.salvarAtualizar(aluno);
 		return ResponseEntity.ok().body(aluno);
 	}
-
 	
-	@DeleteMapping
-	public ResponseEntity<?> excluir(@PathVariable Long id) {
-		service.excluir(id);
-		return ResponseEntity.ok(id);
+	@DeleteMapping(value="{ra}")
+	public ResponseEntity<?> excluir(@PathVariable Long ra) {
+		service.excluir(ra);
+		return ResponseEntity.ok(ra);
 	}
 
 }

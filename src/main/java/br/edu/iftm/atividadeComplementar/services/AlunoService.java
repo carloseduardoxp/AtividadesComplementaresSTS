@@ -18,6 +18,14 @@ public class AlunoService {
 	public List<Aluno> buscar(String nome) {
 		return repository.findByNomeContaining(nome);
 	}
+		
+	public void salvarAtualizar(Aluno aluno) {
+		repository.save(aluno);
+	}
+	
+	public void excluir(Long id) {
+		repository.deleteById(id);
+	}
 	
 	public Optional<Aluno> buscarRa(Long ra) {
 		return repository.findById(ra);

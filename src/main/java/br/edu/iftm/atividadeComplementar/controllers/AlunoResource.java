@@ -34,7 +34,12 @@ public class AlunoResource {
 	@RequestMapping(value="{ra}",method=RequestMethod.GET)
 	public ResponseEntity<?> findByRa(@PathVariable Long ra) {
 		Optional<Aluno> aluno = service.buscarRa(ra);
-		return ResponseEntity.ok().body(aluno);
+		if (aluno.isPresent()) {
+			return ResponseEntity.ok().body(aluno);	
+		} else {
+			return ResponseEntity.notFound().build();
+		}
+		
 	}
 	
 	@GetMapping

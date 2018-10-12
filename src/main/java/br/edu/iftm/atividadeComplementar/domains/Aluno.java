@@ -6,13 +6,18 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Aluno {
 	
 	@Id
+	@NotNull(message="Campo ra precisa ser preenchido")
 	private Long ra;
 	
+	@NotNull(message="Campo nome precisa ser preenchido")
+	@Size(min=3, message="Nome precisa ter pelo menos 3 caracteres")
 	private String nome;
 	
 	@OneToMany(fetch=FetchType.EAGER)

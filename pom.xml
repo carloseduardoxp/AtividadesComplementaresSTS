@@ -6,7 +6,7 @@
 	<groupId>br.edu.iftm.atividadeComplementar</groupId>
 	<artifactId>AtividadeComplementarSTS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>AtividadeComplementarSTS</name>
 	<description>Atividade Complementar</description>

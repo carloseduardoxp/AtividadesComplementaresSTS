@@ -21,7 +21,7 @@ public class AlunoRepositoryTest {
 	
 	@Test
 	public void testaAlunoCarlos() {
-		List<Aluno> c = repository.findByNomeContaining("carlos");
+		List<Aluno> c = repository.findByNomeContaining("breno");
 		assertThat(c.size()).isGreaterThan(0);
 	}
 	

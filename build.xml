@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AtividadeComplementarSTS-bkp" default="bkp" basedir=".">
+	<property name="projeto" value="${ant.project.name}" />
+	<property name="bkp-dir" value="/servidor-bkp/fontes/" />
+	<property name="diretorio-para-zipar" value="src" />
+	<target name="clean">
+		<delete file="${projeto}.zip" />
+	</target>
+	<target name="bkp">
+		<zip destfile="${projeto}.zip">
+			<fileset dir="${diretorio-para-zipar}" />
+		</zip>
+		<copy file="${projeto}.zip" todir="${bkp-dir}" />
+	</target>
+</project>
